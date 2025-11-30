@@ -109,14 +109,46 @@
 <section id="laws">
     <h2>القوانين</h2>
 
-    <div class="law-box" onclick="toggleLaw('law1')">قوانين الشرطة</div>
-    <div id="law1" class="law-content">ضع هنا قوانين الشرطة.</div>
+    <style>
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab-btn {
+            background: #00aaff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+        .tab-btn.active { background: #0088cc; }
+        .tab-content { display: none; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .tab-content.active { display: block; }
+    </style>
 
-    <div class="law-box" onclick="toggleLaw('law2')">قوانين العدل</div>
-    <div id="law2" class="law-content">ضع هنا قوانين العدل.</div>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('police')">قوانين الشرطة</button>
+        <button class="tab-btn" onclick="openTab('justice')">قوانين العدل</button>
+        <button class="tab-btn" onclick="openTab('gangs')">قوانين العصابات</button>
+    </div>
 
-    <div class="law-box" onclick="toggleLaw('law3')">قوانين العصابات</div>
-    <div id="law3" class="law-content">ضع هنا قوانين العصابات.</div>
+    <div id="police" class="tab-content active">
+        ضع هنا قوانين الشرطة.
+    </div>
+    <div id="justice" class="tab-content">
+        ضع هنا قوانين العدل.
+    </div>
+    <div id="gangs" class="tab-content">
+        ضع هنا قوانين العصابات.
+    </div>
+
+    <script>
+        function openTab(id) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 
 </section>
 
