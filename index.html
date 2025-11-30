@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESPECT MC</title>
+<style>
+    body {
+        font-family: "Tajawal", sans-serif;
+        margin: 0;
+        background: #e8f7ff;
+        color: #003b5c;
+    }
+    header {
+        background: #00aaff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+    nav a {
+        margin: 0 15px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    section {
+        padding: 40px;
+    }
+    .home-box {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    /* قوانين */
+    .law-box {
+        background: white;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+    .law-box:hover {
+        transform: scale(1.02);
+    }
+    .law-content {
+        display: none;
+        margin-top: 10px;
+        padding: 15px;
+        background: #f0faff;
+        border-radius: 10px;
+        border-right: 5px solid #00aaff;
+    }
+    /* التفعيل */
+    .verify-box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .verify-btn {
+        background: #00aaff;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+    .verify-btn:hover {
+        background: #0088cc;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h2>RESPECT MC</h2>
+    <img src="logo.png" alt="logo">
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#laws">القوانين</a>
+        <a href="#verify">التفعيل</a>
+        <a href="#leaks">تسريبات</a>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="home-box">
+        <h1>مرحباً بك في RESPECT MC</h1>
+        <p>هنا يبدأ عالمك في الرول بلاي!<br> استمتع بتجربة فريدة داخل مجتمع محترم ومتكامل.</p>
+    </div>
+</section>
+
+<section id="laws">
+    <h2>القوانين</h2>
+
+    <div class="law-box" onclick="toggleLaw('law1')">قوانين الشرطة</div>
+    <div id="law1" class="law-content">ضع هنا قوانين الشرطة.</div>
+
+    <div class="law-box" onclick="toggleLaw('law2')">قوانين العدل</div>
+    <div id="law2" class="law-content">ضع هنا قوانين العدل.</div>
+
+    <div class="law-box" onclick="toggleLaw('law3')">قوانين العصابات</div>
+    <div id="law3" class="law-content">ضع هنا قوانين العصابات.</div>
+
+</section>
+
+<section id="verify">
+    <div class="verify-box">
+        <h2>التفعيل</h2>
+        <p>للدخول معانا في الرول يجب عليك التقديم من هذا الموقع:</p>
+        <a class="verify-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf9JHA5M8sTrTvLLSCo5SbE4q3_eIqmbhGYmjCdZ_L3zhDY_A/viewform" target="_blank">اضغط هنا للتقديم</a>
+    </div>
+</section>
+
+<section id="leaks">
+    <h2>قسم التسريبات</h2>
+    <p>سيتم وضع التسريبات هنا.</p>
+</section>
+
+<script>
+function toggleLaw(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
